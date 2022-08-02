@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class StudentReportCard {
 	
+	// Created non-static variables
+	
 	String name, rollNo;
 	
 	String grade, section;
@@ -22,7 +24,7 @@ public class StudentReportCard {
 	
 	double perc_marks = 0.0;
 	
-	// used parameterized constructor to initialize values to the non-static variables
+	// used parameterized constructor to initialize values of the non-static variables
 	
 	public StudentReportCard (String n, String r, String g, String s, int my_m, int my_e, int my_s, int my_ht, int my_g, int my_hn, int my_co)
 	{
@@ -63,18 +65,27 @@ public class StudentReportCard {
 		{
 			System.out.println("Grade: A");
 		}
-		if(perc_marks >= 80 && perc_marks <= 89)
+		else if(perc_marks >= 80 && perc_marks <= 89)
 		{
 			System.out.println("Grade: B");
 		}
-		if(perc_marks >= 70 && perc_marks <= 79)
+		else if(perc_marks >= 70 && perc_marks <= 79)
 		{
 			System.out.println("Grade: C");
 		}
-		if(perc_marks >= 60 && perc_marks <= 69)
+		else if(perc_marks >= 60 && perc_marks <= 69)
 		{
 			System.out.println("Grade: D");
 		}
+		else if(perc_marks >= 50 && perc_marks <= 59)
+		{
+			System.out.println("Grade: E");
+		}
+		else
+		{
+			System.out.println("Result: Fail");
+		}
+		
 	}
 	
 	// method used for displaying the student report card
@@ -152,7 +163,7 @@ public class StudentReportCard {
 		
 		int my_co = sc.nextInt();
 		
-		// passing the local variables as argument to the Constructor
+		// passing the local variables as arguments to the Constructor
 		
 		StudentReportCard s = new StudentReportCard(my_name, my_rollno, my_class, my_sec, my_m, my_e, my_s, my_ht, my_g, my_hn, my_co);
 		
